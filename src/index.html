@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<body>
+  <div class="buttons-container">
+    <input type="file" id="file-input" style="display: none;"> 
+    <label
+      class="button button--large"
+      for="file-input"
+      ondrop="onFileDrop(event);"
+      ondragover="dragOverHandler(event);"
+    >
+      Load file
+    </label>
+    <a class="button button--large" id="exportJSON" onclick="saveModel(this)">Save file</a>
+  </div>
+  
+  <div id="app" class="app">
+    <div  v-for="(translation, translationIndex) in reducedKeys">
+      <h3>{{translation.key}}</h3>
+      <template v-if="Array.isArray(translation.value)">
+        <div 
+          v-for="(translationValue, translationValueIndex) in translation.value"
+        >
+          <div class="translation-container">
+            <div><b>Original:</b> <i>{{translation.originalValue[translationValueIndex]}}</i></div>
+            <div class="input-container">
+              <input class="input-text" type="text" v-model="translation.value[translationValueIndex]"></input>
+            </div>
+          </div>
+        </div>
+      </template>
+      <template v-else>
+        <div class="translation-container">
+          <div><b>Original:</b> <i>{{reducedKeys[translationIndex].originalValue}}</i></div>
+          <div 
+            class="input-container"
+          >
+            <input class="input-text" type="text" v-model="reducedKeys[translationIndex].value"></input>
+          </div>
+        </div>
+      </template>
+    </div>  
+  </div>  
+</body>
+
+<script src="main.js"></script>

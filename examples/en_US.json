@@ -1,0 +1,229 @@
+{
+	"launchIntent": {
+		"greeting": "Hello and welcome to Kitchen Plus. Say \"help\" to hear some options.",
+		"reprompt": "Sorry, I don't know how to do that. Try again or say help to hear some options."
+	},
+	"fallbackIntent": {
+		"didNotUnderstand": "Sorry, I didn't catch that. What did you want me to do?"
+	},
+	"common": {
+		"farewell": "Okay, talk to you later!",
+		"time": {
+			"hour": {
+				"singular": "hour",
+				"plural": "hours"
+			},
+			"minute": {
+				"singular": "minute",
+				"plural": "minutes"
+			}
+		},
+		"and": "and"
+	},
+	"helpIntent": {
+		"recommendUtterance": "Here's something you can ask me: {{ sampleUtterance }}",
+		"reprompt": "Try again, here's something you can ask me: {{ sampleUtterance }}"
+	},
+	"error": {
+		"noDevice": [
+			"Sorry, I can’t find an Airfryer. Please add it to your profile in the NutriU app?",
+			"Sorry, I can’t find an Airfryer. Please add it to your profile in the NutriU app so I can help you cook.",
+			"Sorry, it doesn’t look like there’s an Airfryer. If you have one, add it to your profile in the NutriU app and then I can help you."
+		],
+		"generic": "Sorry, something went wrong",
+		"deviceUnreachable": [
+			"Sorry, your Airfryer isn’t online. Check that it’s plugged in and your Wi-Fi connection is active.",
+			"Sorry, something’s not right. Check that your Airfryer is plugged in and connected to the internet.",
+			"Sorry, I tried but it looks like your Airfryer isn’t online. Check that it’s plugged in and connected to your Wi-Fi."
+		],
+		"serviceUnavailable": [
+			"Sorry, I can't connect to the Airfryer right now. Please try again later.",
+			"Sorry, I tried but I can't reach it now. Please try again later."
+		],
+		"deviceNotPaired": [
+			"Sorry, I can’t find an Airfryer. Have you paired it with the NutriU app?",
+			"It looks like your Airfryer isn't paired with the NutriU app. Pair it first and then we can start cooking.",
+			"Sorry, you'll have to pair the Airfryer with the NutriU app first."
+		],
+		"deviceTurnedOff": [
+			"Sorry, I tried but your Airfryer is off.",
+			"Sorry, the Airfryer is off. Turn it on first. Then we can start cooking.",
+			"Sorry, you need to turn your Airfryer on first."
+		],
+		"drawerOpen": "The drawer is open. Please, close the drawer first and say the command again."
+	},
+	"setTemperatureIntent": {
+		"success": [
+			"No problem. I have set your Airfryer to cook at {{temperature}} degrees.",
+			"Of course. Your Airfryer is now set to cook at {{temperature}} degrees.",
+			"OK, your Airfryer will cook at {{temperature}} degrees."
+		]
+	},
+	"turnOnIntent": {
+		"success": ["Sure. It's on now.", "OK. It's on and ready.", "No problem. It's on."]
+	},
+	"turnOffIntent": {
+		"success": ["Sure. I've switched it off.", "OK. It's off.", "No problem. It's off now."],
+		"currentlyCooking": [
+			"Sorry, it's cooking something right now. You'll have to tell it to stop first.",
+			"OK, but it looks like you're cooking something now. You'll have to stop cooking first.",
+			"I tried, but it's cooking now. If you're sure you want to turn it off, tell it to stop first."
+		]
+	},
+	"setCookingTimeIntent": {
+		"success": [
+			"OK, I have set your Airfryer to cook for {{time}}.",
+			"Sure, your Airfryer is now set to cook for {{time}}.",
+			"No problem. Your airfryer will cook for {{time}}."
+		],
+		"currentlyCooking": [
+			"Sorry, I tried but your Airfryer is cooking right now. You'll have to pause it before you can change the time.",
+			"Sorry, you'll have to pause cooking before you can change the time."
+		]
+	},
+	"setParametersAndStartCookingIntent": {
+		"success": [
+			"OK, your Airfryer is set to cook at {{temperature}} degrees for {{time}}.",
+			"Sure, your Airfryer will cook for {{time}} at {{temperature}} degrees.",
+			"No problem. The Airfryer is cooking for {{time}} at {{temperature}} degrees."
+		],
+		"drawerOpen": [
+			"Whoops, it looks like the Airfryer's drawer is still open. Close it to start cooking.",
+			"Sorry, the Airfryer drawer isn't shut properly. Please close it.",
+			"Sorry, it looks like the Airfryer drawer isn't fully closed. Close the drawer to start cooking."
+		],
+		"currentlyCooking": "Your Airfryer is currently cooking. Please end the cooking process first."
+	},
+	"setParametersIntent": {
+		"success": [
+			"OK, your Airfryer is set to cook at {{ temperature }} degrees for {{ time }}.",
+			"No problem. The Airfryer is set for {{ temperature }} degrees for {{ time }}."
+		]
+	},
+	"setCookingParameters": {
+		"cookingTimeOutOfRange": "Sorry, cooking time must be between {{ lowerLimit }} and {{ upperLimit }}. How long would you like to cook for?",
+		"temperatureOutOfRange": [
+			"Sorry, you have to select a temperature between {lowerlimit} and {{ upperLimit }} degrees. What should I set it to?",
+			"Sorry, the Airfryer can only cook at temperatures from {lowerlimit} to {{ upperLimit }} degrees. What temperature would you like?"
+		],
+		"cookingTimeStepInvalid": "Sorry, cooking time must be in full minutes only. How long would you like to cook for?"
+	},
+	"startCookingIntent": {
+		"success": ["Sure. It's started cooking now.", "No problem. It's cooking now.", "OK, your food is cooking now."],
+		"drawerOpen": [
+			"Whoops, it looks like the Airfryer's drawer is still open. Close it to start cooking.",
+			"Sorry, the Airfryer drawer isn't shut properly. Please close it.",
+			"Sorry, it looks like the Airfryer drawer isn't fully closed. Close the drawer to start cooking."
+		]
+	},
+	"selectPresetIntent": {
+		"success": [
+			"No problem, selecting and starting {{preset}}.",
+			"Sure. I've selected and started {{preset}}."
+		],
+		"currentlyCooking": "You need to pause cooking first"
+	},
+	"increaseCookingTimeIntent": {
+		"success": "Done, the time is increased by {{ timeDelta }}.",
+		"cookingTimeOutOfRange": "That would make the cooking time exceed the maximum of {{ upperLimit }}. For how much would you like to increase the time?",
+		"currentlyCooking": "Your Airfryer is currently cooking. Please end the cooking process first."
+	},
+	"decreaseCookingTimeIntent": {
+		"success": "Done, the time is decreased by {{ timeDelta }}.",
+		"cookingTimeOutOfRange": "That would make the cooking time below the minimum of {{ lowerLimit }}. For how much would you like to decrease the time?",
+		"currentlyCooking": "Your Airfryer is currently cooking. Please end the cooking process first."
+	},
+	"pauseCookingIntent": {
+		"success": [
+			"Sure. It's paused now.",
+			"OK. It's paused now.",
+			"No problem. It's paused now."
+		],
+		"notCookingCurrently": [
+			"Sorry, your Airfryer isn't cooking right now.",
+			"The Airfryer isn't cooking right now. Perhaps your food has already finished cooking.",
+			"I checked but the Airfryer isn't cooking right now."
+		],
+		"deviceTurnedOff": [
+			"Sorry, I tried but your Airfryer is off.",
+			"Sorry, the Airfryer is off."
+		]
+	},
+	"resumeCookingIntent": {
+		"success":[
+			"Sure. It's cooking again now.",
+			"OK. It's cooking again.",
+			"No problem. It has resumed cooking now."
+		],
+		"noPausedCooking": [
+			"Sorry, your Airfryer isn't cooking right now.",
+			"The Airfryer isn't cooking right now. Perhaps your food has already finished cooking.",
+			"I checked but the Airfryer isn't cooking right now."
+		]
+	},
+	"cancelCookingIntent": {
+		"success": ["Sure. It's not cooking anymore.", "No problem. It's stopped cooking now.", "OK, it's stopped now."],
+		"notCurrentlyCooking": [
+			"Sorry, your Airfryer isn't cooking anything right now.",
+			"The Airfryer isn't cooking right now. Perhaps your food has already finished cooking.",
+			"I checked but there's nothing cooking right now."
+		],
+		"deviceTurnedOff": [
+			"Sorry, I tried but your Airfryer is off.",
+			"Sorry, your Airfryer isn't cooking anything and is switched off.",
+			"Sorry, your Airfryer is switched off."
+		],
+		"deniedConfirmationResponse": "OK"
+	},
+	"startKeepWarmIntent": {
+		"success": [
+			"Sure. It's in Keep Warm mode now.",
+			"OK. It's set to Keep Warm now.",
+			"No problem. It's keeping your food warm now."
+		],
+		"currentlyCooking": "Your Airfryer is currently cooking. Please end the cooking process first.",
+		"drawerOpen": [
+			"Whoops, it looks like the Airfryer's drawer is still open. Please shut it.",
+			"Sorry, the Airfryer drawer isn't shut properly, so it can't keep warm.",
+			"Sorry, it looks like the Airfryer drawer isn't fully closed. Please shut it so it can keep warm."
+		]
+	},
+	"increaseTemperatureIntent": {
+		"success": "Done, the temperature is increased by {{ temperatureDelta }} degrees.",
+		"temperatureOutOfRange": "That would make the temperature exceed the maximum of {{ upperLimit }}. For how much would you like to increase the temperature?",
+		"currentlyCooking": "Your Airfryer is currently cooking. Please end the cooking process first."
+	},
+	"decreaseTemperatureIntent": {
+		"success": "Done, the temperature is decreased by {{ temperatureDelta }} degrees.",
+		"temperatureOutOfRange": "That would make the temperature lower than the minimum of {{ lowerLimit }}. For how much would you like to decrease the temperature?",
+		"currentlyCooking": "Your Airfryer is currently cooking. Please end the cooking process first."
+	},
+	"reportCookingTimeIntent": {
+		"report": "It's {{ time }} left",
+		"reportPaused": "It's {{ time }} left, but cooking is currently paused.",
+		"notCookingCurrently": "Your Airfryer is not currently cooking."
+	},
+	"reportTemperatureIntent": {
+		"report": "The currently selected temperature is {{ temperature }} degrees.",
+		"noTemperatureSet": "There is no temperature set on your airfryer."
+	},
+	"reportCookingState": {
+		"notCookingCurrently": "The Airfryer is not cooking currently."
+	},
+	"reportCookingRecipeIntent": {
+		"report": "{{ recipeTitle }}",
+		"reportPaused": "Airfryer is cooking {{ recipeTitle }}, but cooking is currently paused.",
+		"presetCooking": "The Airfryer is cooking in {{ preset }} mode.",
+		"manualCooking": "The Airfyer is cooking in manual mode."
+	},
+	"airfryerPreset": {
+		"frozenSnacks": "frozen fries",
+		"freshFries": "fresh fries",
+		"chickenDrumsticks": "chicken drumsticks",
+		"fish": "fish",
+		"cake": "cake",
+		"steak": "chops",
+		"vegetables": "vegetables",
+		"keepWarm": "keep warm"
+	}
+}
