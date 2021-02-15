@@ -18,7 +18,7 @@
   </div>
   
   <div id="app" class="app">
-    <div  v-for="(translation, translationIndex) in reducedKeys">
+    <div  v-for="(translation, translationIndex) in reducedKeys" class="translation-container">
       <h3>{{translation.key}}</h3>
       <template v-if="Array.isArray(translation.value)">
         <div 
